@@ -1,0 +1,3 @@
+model,runtime,samples,threads,warmup,file_bytes,parameters,process_rss_bytes,process_cpu_percent,power_watts,gpu_usage,fps,p95_ms,median_ms,max_logit_error,differing_predictions,preprocess_ms,inference_ms,postprocess_ms,total_ms
+cnn,onnx,100,2,10,301338,75079,685252608,158.2,,,1432.3672016558162,0.8424849999999999,0.6717,2.384185791015625e-06,0,0.456299,0.23901300000000003,0.002833,0.6981450000000001
+mobilenet,onnx,100,2,10,6109734,1525031,709591040,187.5,,,816.9847869262828,1.481595,1.19415,6.67572021484375e-06,0,0.629136,0.591638,0.003239,1.2240129999999998

@@ -1,0 +1,53 @@
+Windows prototype and experiment status
+
+Environment: Python 3.11.9 in the project venv. PyTorch 2.8.0, torchvision 0.23.0,
+CUDA runtime 12.6 and an RTX 3050 Laptop GPU. pip check passed. The resource
+inventory, package versions, model hash and observed categories are in environment_report.txt.
+
+Camera and model: completed a 30-frame headless camera trial and a 20-frame
+OpenCV preview. The logged 30-frame trial observed the no-face path. The local
+model returned 478 landmarks and 52 named coefficients on an existing FER
+training image. No webcam images were saved. Offline Windows speech completed
+a test utterance. Listener comprehension and physical speaker output need human
+verification during an actual conversation.
+
+Expression and smoothing: four automated tests passed across classification,
+persistence, gap handling, speech queue behavior and dataset splitting. In the
+programmed 30 Hz coefficient stress test, transitions fell from 16 to 2 and the
+persistent onset moved 0.4 seconds later. Participant accuracy, false spoken
+announcements per minute and time to audible feedback await independent
+time-aligned annotations. The live default uses unvalidated heuristic thresholds.
+
+FER2013: decoded 35,887 images, zero unreadable. Kept all 7,178 test files.
+Excluded 703 training files with decoded pixels found in test. The remaining
+23,801 training and 4,205 validation files are assigned in fer_manifest.csv.
+Original images were preserved. Subject-independent splitting is unverified.
+
+Training: both architectures completed one CUDA smoke epoch with 84 training
+and 84 validation images each. Files containing "_smoke" belong to development
+checks. Full CNN training completed 24 epochs. MobileNet stopped at epoch 23
+after five epochs without improving on epoch 18's validation loss. On 7,178
+held-out test images, CNN accuracy was 50.85% and macro F1 was 0.4092.
+MobileNet accuracy was 59.25% and macro F1 was 0.5468. These metrics describe
+the seven FER2013 categories. Live movement and spoken feedback need independent validation.
+
+Optimization: exported both smoke checkpoints to float ONNX and calibrated INT8
+using development images. CPU benchmark used batch one, two threads, ten warm-ups,
+and the same 100 validation paths in each runtime. All four exports agreed on
+top category with their respective smoke checkpoints on those inputs. Sequential
+disk reads and OS cache state affect total latency. Process RSS includes loaded
+libraries and the PyTorch reference model. Full float and INT8 exports were also
+generated. See fer_runtime_comparison.csv for the full-checkpoint laptop benchmark.
+Wearable runtime selection and on-device power measurement await target hardware.
+
+Custom data: collector, annotation review and participant-split classifier tools
+are implemented. No participant recording or verified custom annotations exist.
+DISFA and CK+ annotation indexers were run in the missing-data condition only.
+Pairing licensed annotations to decoded media and validating those alignments
+remain pending. Optional VLM comparison awaits local weights and reviewed images.
+
+Deployment: see research_papers/Run guide.md for Pi, Android and external-camera
+instructions, version entry points, full training and resume commands. The Pi,
+Android port, smart-glasses hardware, sustained thermals and battery life remain
+untested. Validate live movement recognition, stale announcements in conversation
+and accessibility with consenting users before relying on the wearable.

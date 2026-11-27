@@ -1,0 +1,133 @@
+{
+  "split": "validation smoke subset",
+  "samples": 84,
+  "accuracy": 0.21428571428571427,
+  "balanced_accuracy": 0.21428571428571427,
+  "loss": 1.940007902327038,
+  "macro_f1": 0.09795918367346938,
+  "micro_f1": 0.21428571428571427,
+  "classes": {
+    "angry": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 12.0
+    },
+    "disgust": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 12.0
+    },
+    "fear": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 12.0
+    },
+    "happy": {
+      "precision": 0.17647058823529413,
+      "recall": 0.75,
+      "f1-score": 0.2857142857142857,
+      "support": 12.0
+    },
+    "neutral": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 12.0
+    },
+    "sad": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 12.0
+    },
+    "surprise": {
+      "precision": 0.2727272727272727,
+      "recall": 0.75,
+      "f1-score": 0.4,
+      "support": 12.0
+    },
+    "accuracy": 0.21428571428571427,
+    "macro avg": {
+      "precision": 0.06417112299465241,
+      "recall": 0.21428571428571427,
+      "f1-score": 0.09795918367346938,
+      "support": 84.0
+    },
+    "weighted avg": {
+      "precision": 0.06417112299465241,
+      "recall": 0.21428571428571427,
+      "f1-score": 0.0979591836734694,
+      "support": 84.0
+    }
+  },
+  "parameters": 75079,
+  "file_bytes": 309357,
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      10,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      8,
+      0,
+      0,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      7
+    ],
+    [
+      0,
+      0,
+      0,
+      9,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      0,
+      0,
+      7,
+      0,
+      0,
+      5
+    ],
+    [
+      0,
+      0,
+      0,
+      9,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      9
+    ]
+  ]
+}

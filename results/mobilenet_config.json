@@ -1,0 +1,12 @@
+{
+  "epochs": 24,
+  "batch_size": 64,
+  "lr": 0.001,
+  "patience": 5,
+  "resume": false,
+  "smoke": false,
+  "pretrained": false,
+  "class_weights": false,
+  "device": "cuda",
+  "seed": 42
+}

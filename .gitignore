@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+datasets/
+.env
+.env.*
+results/blendshape_samples.csv
+results/performance.csv
+results/environment_report.txt
+results/fer_manifest.csv
+results/fer_errors.csv
+results/disfa_au.csv
+results/ckplus_au.csv
+results/vlm_reviews.csv
+results/*_resume.pth

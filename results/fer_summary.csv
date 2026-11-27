@@ -1,0 +1,8 @@
+label,excluded_test_duplicate,test,train,val
+angry,116,958,3302,577
+disgust,47,111,331,58
+fear,109,1024,3393,595
+happy,58,1774,6081,1076
+neutral,48,1233,4173,744
+sad,50,1247,4068,712
+surprise,275,831,2453,443

@@ -1,0 +1,3 @@
+model,runtime,samples,threads,warmup,file_bytes,parameters,process_rss_bytes,process_cpu_percent,power_watts,gpu_usage,fps,p95_ms,median_ms,max_logit_error,differing_predictions,preprocess_ms,inference_ms,postprocess_ms,total_ms
+cnn,torch,100,2,10,309137,75079,681144320,127.2,,,540.2966769052887,2.237605,1.80985,,,0.60597,1.24084,0.004025,1.8508350000000002
+mobilenet,torch,100,2,10,6237757,1525031,698388480,99.9,,,145.52492660086514,7.56177,6.8065,,,0.865232,5.999805,0.006638000000000001,6.871675
